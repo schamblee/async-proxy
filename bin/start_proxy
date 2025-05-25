@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+echo "Starting Async Proxy Server..."
+
+# Set environment variables for high concurrency
+export RAILS_ENV=development
+export RAILS_MAX_THREADS=50
+
+# Optional: For local testing with ngrok
+# echo "Starting ngrok..."
+# ngrok http 3000 &
+# sleep 2
+# export NGROK_URL=$(curl -s localhost:4040/api/tunnels | jq -r '.tunnels[0].public_url')
+# echo "Ngrok URL: $NGROK_URL"
+
+# Start the Rails server
+echo "Starting Rails server with high concurrency..."
+bin/rails server -p 3000
