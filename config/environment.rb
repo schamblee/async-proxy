@@ -1,9 +1,10 @@
-# Set the environment variable
+# config/environment.rb
 ENV["RACK_ENV"] ||= "development"
 
 require "bundler"
 Bundler.require(:default, ENV["RACK_ENV"])
 
-# Load controllers
+# Load the application environment
+require './app/services/job_queue'
 require "./app/controllers/application_controller"
-Dir["./app/controllers/*.rb"].each { |file| require file }
+require "./app/controllers/proxy_controller"

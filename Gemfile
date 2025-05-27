@@ -1,6 +1,7 @@
-# Gemfile
 source "https://rubygems.org"
 
+gem "connection_pool"
+gem "net-http-persistent"
 gem "rack"
 gem "rack-parser"
 gem "rackup"

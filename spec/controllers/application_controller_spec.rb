@@ -1,7 +1,7 @@
 require "spec_helper"
-require_relative "../app/controllers/application_controller"
+require_relative "../../app/controllers/application_controller"
 
-RSpec.describe "Async Proxy App" do
+RSpec.describe "ApplicationController" do
   include Rack::Test::Methods
 
   def app
