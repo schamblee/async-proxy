@@ -1,4 +1,3 @@
-# config/environment.rb
 ENV["RACK_ENV"] ||= "development"
 
 require "bundler"

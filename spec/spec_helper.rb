@@ -1,4 +1,3 @@
-# spec/spec_helper.rb
 ENV["RACK_ENV"] = "test"
 
 require "rack/test"
@@ -10,7 +9,4 @@ RSpec.configure do |config|
   
   # Pretty print test output
   config.formatter = :documentation
-  
-  # Allow focusing on specific tests with :focus
-  config.filter_run_when_matching :focus
 end
